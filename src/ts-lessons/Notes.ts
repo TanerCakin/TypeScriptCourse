@@ -40,4 +40,36 @@ Return type → number
 | `as`         | Type assertion                  | `value as string`               |            |        |   |            |
 | `await`      | Wait for async result           | `await page.click()`            |            |        |   |            |
 
+Stack vs Heap
+| Feature        | Stack       | Heap              |
+| -------------- | ----------- | ----------------- |
+| Speed          | Very fast   | Slower            |
+| Size           | Small       | Large             |
+| Data           | Primitives  | Objects & Arrays  |
+| Access         | Direct      | Via reference     |
+| Memory Release | Automatic   | Garbage Collected |
+| Order          | LIFO        | No order          |
+
+### Stack vs Heap Memory (TypeScript)
+
+- Stack stores primitives and function calls
+- Heap stores objects and class instances
+- Stack is fast, heap is flexible
+- Primitives are copied by value
+- Objects are copied by reference
+- Avoid shared heap objects in Playwright tests
+- Prefer fresh objects per test
+
+### null vs undefined (TypeScript)
+
+- undefined = variable declared but not assigned
+- null = intentionally empty value
+- undefined is assigned by JS
+- null is assigned by developer
+- strictNullChecks enforces safety
+- Use === always
+- Prefer null for explicit empty state
+- Avoid shared undefined values in tests
+
+
 */

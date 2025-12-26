@@ -80,12 +80,7 @@ message = 10 as any; // forcing JS-like behavior (DON'T do this in real TS)
 let num1: string = "2";
 let num2: number = 3;
 
-// Your original text said this is a compile-time error:
-// `let result = num1 + num2;`
-// Important detail: In TS, `string + number` is actually allowed and results in a string.
-// So the correct “type safety” example should use an operator that requires numbers:
-
-// ✅ Correct type safety example (compile-time error):
+// ✅ type safety example (compile-time error):
 // const result = num1 * num2; // ❌ Error: The left-hand side must be a number
 
 /**
